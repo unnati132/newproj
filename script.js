@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded',()=>{
 
-// Lucide icons
-lucide.createIcons();
+// Lucide icons (safe fallback if CDN fails to load)
+if (window.lucide && typeof lucide.createIcons === 'function') {
+  lucide.createIcons();
+}
 
 // Navbar scroll
 const nav=document.querySelector('nav');
@@ -13,13 +15,13 @@ const navLinks=document.getElementById('nav-links');
 mobileBtn.addEventListener('click',()=>{
 navLinks.classList.toggle('active');
 mobileBtn.innerHTML=`<i data-lucide="${navLinks.classList.contains('active')?'x':'menu'}"></i>`;
-lucide.createIcons();
+if (window.lucide && typeof lucide.createIcons === 'function') lucide.createIcons();
 });
 navLinks.querySelectorAll('a').forEach(a=>{
 a.addEventListener('click',()=>{
 navLinks.classList.remove('active');
 mobileBtn.innerHTML=`<i data-lucide="menu"></i>`;
-lucide.createIcons();
+if (window.lucide && typeof lucide.createIcons === 'function') lucide.createIcons();
 });
 });
 
@@ -46,7 +48,7 @@ const EMAILJS_TEMPLATE_ID = 'template_153luyz'; // replace with your EmailJS tem
 const contactForm = document.getElementById('contact-form');
 
 const isEmailJsConfigured = () => {
-    return ![EMAILJS_USER_ID, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID].some(v => v.includes('YOUR_'));
+    return window.emailjs && ![EMAILJS_USER_ID, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID].some(v => v.includes('YOUR_'));
 };
 
 if (isEmailJsConfigured()) {
