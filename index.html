@@ -19,11 +19,14 @@
 <!-- Navigation -->
 <nav>
     <div class="logo">UR.</div>
-    <div class="mobile-menu-btn" id="mobile-menu-btn"><i data-lucide="menu"></i></div>
+    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation">
+        <i data-lucide="menu"></i>
+    </button>
     <ul class="nav-links" id="nav-links">
         <li><a href="#hero">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
@@ -50,17 +53,17 @@
     <h2>Driven by Curiosity and Data</h2>
     <p>As a passionate Computer Engineering student, I thrive on exploring complex problems and crafting efficient software solutions. My academic journey has been defined by hands-on projects that bridge the gap between technology and real-world impact, particularly in health-tech and environmental monitoring.</p>
 
-    <div class="skills">
+    <div class="skills" id="skills">
         <div class="section-subtitle">Skills</div>
         <div class="tech-stack">
-            <span>C</span>
-            <span>C++</span>
-            <span>Python</span>
-            <span>JavaScript</span>
-            <span>HTML / CSS</span>
-            <span>Flutter</span>
-            <span>Web Development</span>
-            <span>AI / ML</span>
+            <div class="skill"><i data-lucide="code"></i><span>C</span></div>
+            <div class="skill"><i data-lucide="code"></i><span>C++</span></div>
+            <div class="skill"><i data-lucide="python"></i><span>Python</span></div>
+            <div class="skill"><i data-lucide="javascript"></i><span>JavaScript</span></div>
+            <div class="skill"><i data-lucide="html5"></i><span>HTML / CSS</span></div>
+            <div class="skill"><i data-lucide="smartphone"></i><span>Flutter</span></div>
+            <div class="skill"><i data-lucide="globe"></i><span>Web Development</span></div>
+            <div class="skill"><i data-lucide="cpu"></i><span>AI / ML</span></div>
         </div>
     </div>
 </section>
@@ -90,6 +93,13 @@
     <div class="glass-panel contact-panel">
         <h2>Let's Connect</h2>
         <p>Have any questions or want to collaborate? Send me a message!</p>
+        <div class="contact-nav">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
         <form id="contact-form">
             <input type="text" name="from_name" placeholder="Your Name" required>
             <input type="email" name="reply_to" placeholder="Your Email" required>
