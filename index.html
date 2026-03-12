@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unnati Rijal | Computer Engineering Portfolio</title>
+<meta name="description" content="Personal portfolio of Unnati Rijal, a Computer Engineering student specializing in impactful projects.">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+
+<!-- Background Glows -->
+<div class="bg-glow bg-glow-1"></div>
+<div class="bg-glow bg-glow-2"></div>
+
+<!-- Navigation -->
+<nav>
+    <div class="logo">UR.</div>
+    <div class="mobile-menu-btn" id="mobile-menu-btn"><i data-lucide="menu"></i></div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+<!-- Hero Section -->
+<section id="hero" class="hero fade-in">
+    <div class="hero-content">
+        <div class="profile-container">
+            <div id="profile-pic" class="profile-pic">
+                <img src="hello.jpeg" alt="Profile photo">
+            </div>
+            <input type="file" id="profile-pic-input" accept="image/*" hidden>
+        </div>
+        <span class="badge">Computer Engineering Student</span>
+        <h1>Hi, I'm <span class="gradient-text">Unnati Rijal</span></h1>
+        <p>I build systems and write code to solve real-world problems. Welcome to my creative space.</p>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about fade-in">
+    <div class="section-badge">About Me</div>
+    <h2>Driven by Curiosity and Data</h2>
+    <p>As a passionate Computer Engineering student, I thrive on exploring complex problems and crafting efficient software solutions. My academic journey has been defined by hands-on projects that bridge the gap between technology and real-world impact, particularly in health-tech and environmental monitoring.</p>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects fade-in">
+    <div class="section-badge">My Work</div>
+    <h2>Featured Projects</h2>
+    <div class="project-grid">
+        <div class="project-card glass-panel fade-in delay-1">
+            <div class="project-icon gradient-bg-1"><i data-lucide="mountain-snow"></i></div>
+            <h3>Landslide Detection System</h3>
+            <p>Deep learning pipeline using CNNs and U-Net for landslide segmentation and early warning from satellite and sensor imagery.</p>
+            <div class="tech-stack"><span>Computer Vision</span><span>CNN / U-Net</span><span>Remote Sensing</span></div>
+        </div>
+        <div class="project-card glass-panel fade-in delay-2">
+            <div class="project-icon gradient-bg-2"><i data-lucide="activity"></i></div>
+            <h3>Menstrual Irregularity Detection</h3>
+            <p>Health-focused app analyzing symptoms and cycles to detect potential irregularities and empower women with insights.</p>
+            <div class="tech-stack"><span>Machine Learning</span><span>HealthTech</span><span>Predictive Modeling</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact fade-in">
+    <div class="glass-panel contact-panel">
+        <h2>Let's Connect</h2>
+        <p>Have any questions or want to collaborate? Send me a message!</p>
+        <form id="contact-form">
+            <input type="text" name="from_name" placeholder="Your Name" required>
+            <input type="email" name="reply_to" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <div class="contact-links">
+            <a href="mailto:rijalunnati46@gmail.com" target="_blank"><i data-lucide="mail"></i> Email</a>
+            <a href="https://www.facebook.com/unnati.rijal0" target="_blank"><i data-lucide="facebook"></i> Facebook</a>
+            <a href="https://www.instagram.com/unnatirijal_" target="_blank"><i data-lucide="instagram"></i> Instagram</a>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer>
+<p>&copy; 2026 Unnati Rijal. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
