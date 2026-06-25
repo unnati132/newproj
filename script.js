@@ -34,10 +34,18 @@ document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
 // Profile picture upload
 const profilePic=document.getElementById('profile-pic');
 const profileInput=document.getElementById('profile-pic-input');
+
 profilePic.addEventListener('click',()=>profileInput.click());
+
 profileInput.addEventListener('change',e=>{
 const file=e.target.files[0];
-if(file){const reader=new FileReader();reader.onload=ev=>{profilePic.innerHTML=`<img src="${ev.target.result}">`;};reader.readAsDataURL(file);}
+if(file){
+const reader=new FileReader();
+reader.onload=ev=>{
+profilePic.innerHTML=`<img src="${ev.target.result}">`;
+};
+reader.readAsDataURL(file);
+}
 });
 
 // Contact form via EmailJS (or fallback to mailto if not configured)
