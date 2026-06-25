@@ -242,83 +242,120 @@ nav.scrolled {
 }
 
 .contact {
-  padding: 5rem 2rem;
+  padding: 5rem 1.5rem;
+  display: flex;
+  justify-content: center;
 }
 
 .contact-box {
-  max-width: 900px;
-  margin: auto;
+  width: 100%;
+  max-width: 1000px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 2.5rem;
 
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 16px;
-  padding: 2rem;
+  border-radius: 18px;
+  padding: 2.5rem;
+  align-items: start;
 }
 
 /* LEFT SIDE */
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .contact-left h2 {
   font-size: 2rem;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .contact-left p {
   color: #a1a1aa;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  line-height: 1.5;
 }
 
 .contact-links {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+  margin-top: 10px;
 }
 
 .contact-links a {
   text-decoration: none;
   color: white;
-  padding: 10px;
-  border-radius: 8px;
+  padding: 12px 14px;
+  border-radius: 10px;
   background: rgba(255,255,255,0.05);
   transition: 0.3s;
+  display: flex;
+  align-items: center;
 }
 
 .contact-links a:hover {
   background: rgba(168,85,247,0.2);
-  transform: translateX(5px);
+  transform: translateX(6px);
 }
 
 /* RIGHT SIDE FORM */
 .contact-right {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .contact-right input,
 .contact-right textarea {
-  padding: 12px;
+  width: 100%;
+  padding: 14px;
   border-radius: 10px;
-  border: none;
-  outline: none;
+  border: 1px solid rgba(255,255,255,0.08);
   background: rgba(255,255,255,0.05);
   color: white;
+  font-size: 0.95rem;
+}
+
+.contact-right textarea {
+  min-height: 140px;
+  resize: none;
 }
 
 .contact-right button {
-  padding: 12px;
+  padding: 14px;
   border: none;
   border-radius: 10px;
   background: linear-gradient(135deg, #6366f1, #a855f7);
   color: white;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.25s;
 }
 
 .contact-right button:hover {
-  transform: scale(1.03);
+  transform: scale(1.04);
+}
+
+/* RESPONSIVE FIX */
+@media (max-width: 900px) {
+  .contact-box {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+
+  .contact-left {
+    text-align: center;
+    align-items: center;
+  }
+
+  .contact-links {
+    width: 100%;
+    max-width: 320px;
+  }
 }
 
 /* MOBILE */
