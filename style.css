@@ -251,18 +251,24 @@ nav.scrolled {
 
   padding: 2.5rem;
   backdrop-filter: blur(10px);
+
   align-items: start;
 }
 
-/* LEFT */
+/* LEFT SIDE CLEAN FLOW */
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .contact-left h2 {
   font-size: 2rem;
-  margin-bottom: 10px;
 }
 
 .contact-left p {
-  color: var(--text-secondary);
-  margin-bottom: 25px;
+  color: #a1a1aa;
+  margin-bottom: 10px;
 }
 
 /* LINKS */
@@ -275,10 +281,13 @@ nav.scrolled {
 .contact-links a {
   text-decoration: none;
   color: white;
+
   padding: 12px 14px;
   border-radius: 10px;
+
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.08);
+
   transition: 0.25s ease;
 }
 
@@ -287,13 +296,25 @@ nav.scrolled {
   transform: translateX(6px);
 }
 
-/* FORM */
+/* RIGHT SIDE FORM FIX (SERIAL FLOW FIX) */
 .contact-right {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
 }
 
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  color: #a1a1aa;
+}
+
+/* INPUTS */
 .contact-right input,
 .contact-right textarea {
   width: 100%;
@@ -313,14 +334,18 @@ nav.scrolled {
   resize: none;
 }
 
+/* BUTTON */
 .contact-right button {
   padding: 14px;
   border: none;
   border-radius: 12px;
+
   background: linear-gradient(135deg, #6366f1, #a855f7);
   color: white;
+
   font-weight: 600;
   cursor: pointer;
+
   transition: 0.25s ease;
 }
 
@@ -328,6 +353,14 @@ nav.scrolled {
   transform: translateY(-2px);
 }
 
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .contact-box {
+    grid-template-columns: 1fr;
+    padding: 1.8rem;
+    gap: 2rem;
+  }
+}
 /* FOOTER */
 footer {
   text-align: center;
