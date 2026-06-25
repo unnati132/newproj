@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Unnati Rijal | Computer Engineering Portfolio</title>
+
+<title>Unnati Rijal | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 
 <script src="https://unpkg.com/lucide@latest"></script>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -22,15 +22,10 @@
 <nav>
   <div class="logo">UR.</div>
 
-  <button class="mobile-menu-btn" id="mobile-menu-btn">
-    <i data-lucide="menu"></i>
-  </button>
-
-  <ul class="nav-links" id="nav-links">
+  <ul class="nav-links">
     <li><a href="#hero">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -38,98 +33,64 @@
 <main>
 
 <!-- HERO -->
-<section id="hero" class="hero fade-in">
+<section id="hero" class="hero">
 
-  <div class="profile-container">
-    <div id="profile-pic" class="profile-pic">
-      <img src="hello.jpeg" alt="Profile photo">
-    </div>
+  <div class="profile-pic">
+    <img src="hello.jpeg" alt="Profile">
   </div>
 
   <span class="badge">Computer Engineering Student</span>
 
-  <h1>
-    Hi, I'm <span class="gradient-text">Unnati Rijal</span>
-  </h1>
+  <h1>Hi, I'm <span class="gradient-text">Unnati Rijal</span></h1>
 
-  <p>
-    I build systems and write code to solve real-world problems.
-    Welcome to my creative space.
-  </p>
+  <p>I build systems and write code to solve real-world problems.</p>
 
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="about fade-in">
+<section id="about" class="about">
 
-  <div class="section-badge">About Me</div>
-
-  <h2>Driven by Curiosity and Data</h2>
+  <h2>About Me</h2>
 
   <p>
-    As a passionate Computer Engineering student, I thrive on exploring
-    complex problems and crafting efficient software solutions.
+    Driven by curiosity, I enjoy building software solutions and exploring AI/ML systems.
   </p>
 
-  <div class="skills" id="skills">
-
-    <div class="section-subtitle">Skills</div>
-
-    <div class="tech-stack">
-      <div class="skill"><i data-lucide="code"></i><span>C</span></div>
-      <div class="skill"><i data-lucide="code"></i><span>C++</span></div>
-      <div class="skill"><i data-lucide="python"></i><span>Python</span></div>
-      <div class="skill"><i data-lucide="javascript"></i><span>JavaScript</span></div>
-      <div class="skill"><i data-lucide="html5"></i><span>HTML / CSS</span></div>
-      <div class="skill"><i data-lucide="cpu"></i><span>AI / ML</span></div>
-    </div>
-
+  <div class="skills">
+    <span>C</span>
+    <span>C++</span>
+    <span>Python</span>
+    <span>JavaScript</span>
+    <span>HTML/CSS</span>
+    <span>AI/ML</span>
   </div>
 
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="projects fade-in">
+<section id="projects" class="projects">
 
-  <div class="section-badge">My Work</div>
-
-  <h2>Featured Projects</h2>
+  <h2>Projects</h2>
 
   <div class="project-grid">
 
     <div class="project-card">
-      <div class="project-icon">
-        <i data-lucide="mountain-snow"></i>
-      </div>
-
-      <h3>Landslide Detection System</h3>
-
-      <p>
-        CNN + U-Net based landslide segmentation from satellite images.
-      </p>
-
-      <div class="tech-stack project-tags">
-        <div class="skill">Computer Vision</div>
-        <div class="skill">U-Net</div>
-        <div class="skill">Remote Sensing</div>
+      <h3>Landslide Detection</h3>
+      <p>CNN + U-Net for satellite image segmentation.</p>
+      <div class="tags">
+        <span>AI</span>
+        <span>U-Net</span>
+        <span>CV</span>
       </div>
     </div>
 
     <div class="project-card">
-      <div class="project-icon">
-        <i data-lucide="activity"></i>
-      </div>
-
-      <h3>Menstrual Detection App</h3>
-
-      <p>
-        ML-based health insights for cycle irregularity prediction.
-      </p>
-
-      <div class="tech-stack project-tags">
-        <div class="skill">Machine Learning</div>
-        <div class="skill">HealthTech</div>
-        <div class="skill">Prediction</div>
+      <h3>Health Prediction App</h3>
+      <p>ML-based menstrual cycle prediction system.</p>
+      <div class="tags">
+        <span>ML</span>
+        <span>Health</span>
+        <span>Prediction</span>
       </div>
     </div>
 
@@ -137,34 +98,33 @@
 
 </section>
 
-<!-- CONTACT (FIXED STRUCTURE) -->
-<section id="contact" class="contact fade-in">
+<!-- CONTACT -->
+<section id="contact" class="contact">
 
-  <div class="contact-box">
+  <h2>Contact Me</h2>
 
-    <h2>Let's Connect</h2>
+  <p>Let’s connect and build something together.</p>
 
-    <p>
-      Have any questions or want to collaborate?
-      Send me a message!
-    </p>
-
-    <div class="contact-links">
-      <a href="mailto:rijalunnati46@gmail.com">📧 Email</a>
-      <a href="https://facebook.com" target="_blank">📘 Facebook</a>
-      <a href="https://instagram.com" target="_blank">📸 Instagram</a>
-    </div>
-
-    <form id="contact-form" class="contact-form">
-
-      <input type="text" name="from_name" placeholder="Your Name" required>
-      <input type="email" name="reply_to" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-
-      <button type="submit">Send Message</button>
-
-    </form>
-
+  <div class="contact-links">
+    <a href="mailto:rijalunnati46@gmail.com">Email</a>
+    <a href="https://facebook.com" target="_blank">Facebook</a>
+    <a href="https://instagram.com" target="_blank">Instagram</a>
   </div>
 
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Message" rows="5" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+
 </section>
+
+</main>
+
+<script>
+  lucide.createIcons();
+</script>
+
+</body>
+</html>
