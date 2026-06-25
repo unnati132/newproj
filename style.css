@@ -239,11 +239,11 @@ nav.scrolled {
 
 .contact-box {
   width: 100%;
-  max-width: 1000px;
+  max-width: 700px;
 
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.1);
@@ -252,37 +252,35 @@ nav.scrolled {
   padding: 2.5rem;
   backdrop-filter: blur(10px);
 
-  align-items: start;
+  text-align: center;
 }
 
-/* LEFT SIDE CLEAN FLOW */
-.contact-left {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.contact-left h2 {
+/* TITLE */
+.contact-box h2 {
   font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
-.contact-left p {
+.contact-box p {
   color: #a1a1aa;
-  margin-bottom: 10px;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 
-/* LINKS */
+/* SOCIAL LINKS */
 .contact-links {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 12px;
+  margin-top: 10px;
 }
 
 .contact-links a {
   text-decoration: none;
   color: white;
 
-  padding: 12px 14px;
+  padding: 10px 14px;
   border-radius: 10px;
 
   background: rgba(255,255,255,0.05);
@@ -293,30 +291,19 @@ nav.scrolled {
 
 .contact-links a:hover {
   background: rgba(168,85,247,0.15);
-  transform: translateX(6px);
+  transform: translateY(-2px);
 }
 
-/* RIGHT SIDE FORM FIX (SERIAL FLOW FIX) */
-.contact-right {
+/* FORM */
+.contact-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
+  margin-top: 10px;
 }
 
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.form-group label {
-  font-size: 0.85rem;
-  color: #a1a1aa;
-}
-
-/* INPUTS */
-.contact-right input,
-.contact-right textarea {
+.contact-form input,
+.contact-form textarea {
   width: 100%;
   padding: 14px;
 
@@ -327,15 +314,16 @@ nav.scrolled {
   color: white;
 
   outline: none;
+  font-size: 0.95rem;
 }
 
-.contact-right textarea {
+.contact-form textarea {
   min-height: 130px;
   resize: none;
 }
 
 /* BUTTON */
-.contact-right button {
+.contact-form button {
   padding: 14px;
   border: none;
   border-radius: 12px;
@@ -349,10 +337,16 @@ nav.scrolled {
   transition: 0.25s ease;
 }
 
-.contact-right button:hover {
+.contact-form button:hover {
   transform: translateY(-2px);
 }
 
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact-box {
+    padding: 1.8rem;
+  }
+}
 /* MOBILE FIX */
 @media (max-width: 768px) {
   .contact-box {
