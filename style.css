@@ -1,225 +1,75 @@
-:root {
-  --bg: #0b0f17;
-  --surface: rgba(255,255,255,0.04);
-  --surface-2: rgba(255,255,255,0.07);
-
-  --text: #e5e7eb;
-  --muted: #9ca3af;
-
-  --primary: #7c3aed;
-  --secondary: #06b6d4;
-
-  --border: rgba(255,255,255,0.08);
-  --shadow: 0 20px 50px rgba(0,0,0,0.4);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Outfit", sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
-
-/* ================= NAVBAR ================= */
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.2rem 6%;
-  backdrop-filter: blur(12px);
-  z-index: 100;
-  border-bottom: 1px solid var(--border);
-}
-
-nav.scrolled {
-  background: rgba(10, 14, 25, 0.85);
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: white;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-}
-
-.nav-links a {
-  color: var(--muted);
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.2s;
-}
-
-.nav-links a:hover {
-  color: white;
-}
-
-/* ================= HERO ================= */
-.hero {
-  min-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 6rem 2rem 3rem;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 800;
-}
-
-.gradient-text {
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.hero p {
-  color: var(--muted);
-  margin-top: 1rem;
-  max-width: 600px;
-}
-
-/* ================= SECTIONS ================= */
-section {
-  padding: 5rem 2rem;
-}
-
-/* ================= BADGE ================= */
-.badge {
-  display: inline-block;
-  padding: 0.4rem 1rem;
-  border-radius: 999px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  color: var(--muted);
-  margin-bottom: 1rem;
-}
-
-/* ================= ABOUT ================= */
-.about {
-  text-align: center;
-}
-
-.section-badge {
-  display: inline-block;
-  color: var(--muted);
-  margin-bottom: 1rem;
-}
-
-/* ================= SKILLS ================= */
-.tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 2rem;
-}
-
-.skill {
-  padding: 0.4rem 0.9rem;
-  border-radius: 999px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-
-/* ================= PROJECTS ================= */
-.projects {
-  text-align: center;
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.project-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 1.5rem;
-  box-shadow: var(--shadow);
-  transition: 0.25s;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  background: var(--surface-2);
-}
-
-/* ================= CONTACT ================= */
 .contact {
   display: flex;
   justify-content: center;
+  padding: 6rem 1.5rem;
+  background: #0c0f14;
 }
 
 .contact-box {
   width: 100%;
-  max-width: 1000px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  max-width: 700px;
 
-  padding: 2.5rem;
-  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 
-  background: var(--surface);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
+  padding: 2.8rem;
+  border-radius: 16px;
+
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* TITLE */
+.contact-left {
+  text-align: center;
 }
 
 .contact-left h2 {
   font-size: 2rem;
+  font-weight: 600;
+  color: #e7e7e7;
 }
 
 .contact-left p {
-  color: var(--muted);
+  color: #a3a3a3;
   margin-top: 0.5rem;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
 }
 
+/* LINKS */
 .contact-links {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   margin-top: 1.5rem;
+  align-items: center;
 }
 
 .contact-links a {
+  width: 100%;
+  max-width: 320px;
+
   text-decoration: none;
-  color: var(--text);
+  color: #e7e7e7;
+
   padding: 12px;
   border-radius: 10px;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid var(--border);
-  transition: 0.2s;
+
+  border: 1px solid rgba(255,255,255,0.08);
+  background: transparent;
+
+  text-align: center;
+
+  transition: 0.2s ease;
 }
 
 .contact-links a:hover {
-  transform: translateX(5px);
-  border-color: var(--primary);
+  border-color: #c4b5fd;
+  transform: translateY(-2px);
 }
 
 /* FORM */
@@ -231,44 +81,46 @@ section {
 
 .contact-right input,
 .contact-right textarea {
+  width: 100%;
   padding: 12px;
+
   border-radius: 10px;
-  border: 1px solid var(--border);
-  background: rgba(0,0,0,0.2);
-  color: white;
+  border: 1px solid rgba(255,255,255,0.08);
+
+  background: rgba(0,0,0,0.25);
+  color: #e7e7e7;
+
   outline: none;
+  font-size: 0.95rem;
+}
+
+.contact-right textarea {
+  min-height: 140px;
+  resize: none;
 }
 
 .contact-right input:focus,
 .contact-right textarea:focus {
-  border-color: var(--primary);
+  border-color: #c4b5fd;
 }
 
+/* BUTTON */
 .contact-right button {
   padding: 12px;
+
   border-radius: 10px;
-  border: none;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  color: white;
-  font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.08);
+
+  background: transparent;
+  color: #e7e7e7;
+
   cursor: pointer;
+  transition: 0.2s ease;
+  font-weight: 500;
 }
 
-/* ================= FOOTER ================= */
-footer {
-  text-align: center;
-  padding: 2rem;
-  color: var(--muted);
-  border-top: 1px solid var(--border);
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 900px) {
-  .contact-box {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
-  }
+.contact-right button:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: #c4b5fd;
+  transform: translateY(-2px);
 }
