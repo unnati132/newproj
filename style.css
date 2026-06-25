@@ -199,7 +199,7 @@ nav.scrolled {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  cursor: default;
   overflow: hidden;
   border: 3px solid #9333ea;
   transition: 0.3s;
