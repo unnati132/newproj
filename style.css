@@ -26,14 +26,15 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.7;
+  letter-spacing: 0.2px;
 }
 
-/* ================= NAVBAR ================= */
+/* ================= NAV ================= */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 1.2rem 6%;
+  padding: 1.3rem 6%;
 
   display: flex;
   justify-content: space-between;
@@ -49,8 +50,9 @@ nav.scrolled {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .nav-links {
@@ -84,6 +86,7 @@ nav.scrolled {
 .hero h1 {
   font-size: 3rem;
   font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 .gradient-text {
@@ -93,24 +96,24 @@ nav.scrolled {
 .hero p {
   margin-top: 1rem;
   color: var(--muted);
-  max-width: 600px;
-}
-
-/* ================= SECTION BASE ================= */
-section {
-  padding: 5rem 2rem;
+  max-width: 580px;
+  font-size: 1.05rem;
 }
 
 /* ================= BADGE ================= */
 .badge {
-  display: inline-block;
   padding: 0.4rem 1rem;
   border-radius: 999px;
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--muted);
-  margin-bottom: 1rem;
   font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+/* ================= SECTIONS ================= */
+section {
+  padding: 5rem 2rem;
 }
 
 /* ================= ABOUT ================= */
@@ -120,6 +123,7 @@ section {
 
 .section-badge {
   color: var(--muted);
+  font-size: 0.9rem;
 }
 
 /* ================= SKILLS ================= */
@@ -153,7 +157,7 @@ section {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
@@ -163,6 +167,7 @@ section {
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 1.6rem;
+
   transition: 0.25s ease;
 }
 
@@ -179,20 +184,20 @@ section {
 
 .contact-box {
   width: 100%;
-  max-width: 1000px;
+  max-width: 980px;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
 
-  padding: 2.5rem;
+  padding: 2.8rem;
   border-radius: 16px;
 
   background: var(--surface);
   border: 1px solid var(--border);
 }
 
-/* LEFT SIDE */
+/* LEFT */
 .contact-left h2 {
   font-size: 2rem;
   font-weight: 600;
@@ -202,28 +207,25 @@ section {
   color: var(--muted);
   margin-top: 0.5rem;
   max-width: 90%;
-  line-height: 1.6;
 }
 
 /* LINKS */
 .contact-links {
+  margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 1.5rem;
 }
 
 .contact-links a {
   text-decoration: none;
   color: var(--text);
 
-  padding: 12px;
+  padding: 11px 12px;
   border-radius: 10px;
 
-  border: 1px solid var(--border);
   background: transparent;
-
-  text-align: center;
+  border: 1px solid var(--border);
 
   transition: 0.2s ease;
 }
@@ -242,21 +244,15 @@ section {
 
 .contact-right input,
 .contact-right textarea {
-  width: 100%;
   padding: 12px;
-
   border-radius: 10px;
-  border: 1px solid var(--border);
 
+  border: 1px solid var(--border);
   background: rgba(0,0,0,0.25);
   color: var(--text);
 
   outline: none;
-}
-
-.contact-right textarea {
-  min-height: 140px;
-  resize: none;
+  transition: 0.2s ease;
 }
 
 .contact-right input:focus,
@@ -264,9 +260,13 @@ section {
   border-color: var(--accent);
 }
 
+.contact-right textarea {
+  min-height: 140px;
+  resize: none;
+}
+
 .contact-right button {
   padding: 12px;
-
   border-radius: 10px;
   border: 1px solid var(--border);
 
@@ -274,7 +274,7 @@ section {
   color: var(--text);
 
   cursor: pointer;
-  transition: 0.2s ease;
+  transition: 0.25s ease;
 }
 
 .contact-right button:hover {
@@ -298,6 +298,7 @@ footer {
 
   .contact-box {
     grid-template-columns: 1fr;
+    padding: 2rem;
   }
 
   .contact-left {
